@@ -1,0 +1,89 @@
+namespace Calificaciones_algortmos
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // Console.Writeline ("Solicitar No. maximo de firmas")
+            double x;
+            Console.WriteLine("ingresa número de firmas Maximas");
+            x = Convert.ToDouble(Console.ReadLine());
+            // Console.Writeline ("Solicitar No de firmas de alumno)
+            double y;
+            Console.WriteLine("ingresa número de firmas");
+            y = Convert.ToDouble(Console.ReadLine());
+            if (x <= y) 
+                Console.WriteLine("tienes derecho a examen");
+            if (x > y)
+                Console.WriteLine("No tienes derecho a examen");
+            // Console.WriteLine("Solicitar porcentaje del examen");
+            double z;
+            Console.WriteLine("ingrese valor de examen");
+            z = Convert.ToDouble(Console.ReadLine());
+            double h;
+            Console.WriteLine("ingrese Porcentaje de alumno");
+            h = Convert.ToDouble(Console.ReadLine());
+            // Brindar el resultado
+            x = (z * h) / 40;
+            Console.WriteLine("tu calificacion es:");
+            Console.WriteLine(x);
+            Console.WriteLine("tu porcentaje es:");
+            Console.WriteLine(h + "%");
+            // Valor Hacer
+            double v;
+            double f;
+            Console.WriteLine("ingrese valor de Hacer");
+            v = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("ingrese porcentaje obtenido");
+            f = Convert.ToDouble(Console.ReadLine());
+            x = (v * f) / 40;
+            Console.WriteLine("tu calificacion es:");
+            Console.WriteLine(x);
+            Console.WriteLine("tu porcentaje es:");
+            Console.WriteLine(f + "%");
+            // Ingresar Puntos del ser 
+            double g;
+            double u;
+            Console.WriteLine("Ingresa valor de Ser");
+            g = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingresa porcentaje obtenido");
+            u = Convert.ToDouble(Console.ReadLine());
+            x = (g * u) / 40;
+            Console.WriteLine("tu calificacion es:");
+            Console.WriteLine(x);
+            Console.WriteLine("tu porcentaje es:");
+            Console.WriteLine(u + "%");
+            // puntos adaptabilidad
+            double o;
+            double p;
+            Console.WriteLine("Ingresa valor de adaptabilidad");
+            o = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingresa porcentaje obtenido");
+            p = Convert.ToDouble(Console.ReadLine());
+            x = (o * p) / 40;
+            Console.WriteLine("tu calificacion es:");
+            Console.WriteLine(x);
+            Console.WriteLine("tu porcentaje es:");
+            Console.WriteLine(p + "%");
+            //Puntaje extra
+            double k;
+            Console.WriteLine("ingrese calificacion Extracurricular");
+            k = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Tu calificacion de Extracurricular es:" + k);
+            // calificaiones finales
+            double m, n, q, r, s, t;
+            Console.WriteLine("Ingrese calificacion examen");
+            m = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingrese calificacion Hacer");
+            n = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingrese calificacion Ser");
+            q = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingrese calificacion Adaptabilidad");
+            r = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingrese calificacion extracurricular");
+            s = Convert.ToDouble(Console.ReadLine());
+            t = (m + n + q + r + s) / 4;
+            Console.WriteLine("tu calificacion es de:" + t);
+        }
+    }
+}
