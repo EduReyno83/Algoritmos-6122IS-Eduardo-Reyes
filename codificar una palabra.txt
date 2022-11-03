@@ -1,0 +1,43 @@
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
+using System.Xml;
+
+namespace Codificacion_de_palabras
+{
+    public static  class Extension
+    {
+        public static int findIndex<T>(this T[] array, T item)
+        {
+            return Array.FindIndex(array, val => val.Equals(item));
+        }
+    }
+    internal class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            
+            char[] alfabeto = { ' ','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '.' };
+            int[,] clave = { { 1, 2, 1 }, { 0, -1, 3 }, { 2, 1, 0 } };
+
+            int[,] matriz = new int[3, 3];
+            
+            int index = alfabeto.findIndex('x');
+            matriz[0, 0] = index;
+            int x;
+            Console.WriteLine("ingrese una palabra");
+            Console.ReadLine();
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    x = matriz[i, j] * clave[j, i];
+                    Console.WriteLine(x);
+                }
+                
+            }
+            
+        }
+    }
+}
